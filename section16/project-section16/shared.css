@@ -25,6 +25,7 @@ main {
   /* margin-top: 3.5rem; */
   /* grid-row: 2 / 3; */
   grid-area: main;
+  width: 100%;
 }
 
 .backdrop {
@@ -122,6 +123,10 @@ main {
 .main-nav__item a:active {
   color: white;
   border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta {
+  animation: wiggle 400ms 3s 8 ease-out none;
 }
 
 .main-nav__item--cta a,
@@ -264,5 +269,17 @@ main {
   .main-footer__links {
     flex-direction: row;
     justify-content: center;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
   }
 }
